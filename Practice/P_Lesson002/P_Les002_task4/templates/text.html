@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block ref %}
+<form action="{{ url_for('text') }}" method="post">
+    <input type="text" name="text" placeholder="Введите текст">
+    <input type="submit" value="Подсчёт слов">
+</form>
+{% endblock %}

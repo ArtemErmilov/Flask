@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>
+        {% block title %}
+        Записная книжка.
+        {% endblock %}
+
+    </title>
+</head>
+<body>
+    <div >
+        <ul>
+            <li ><a href="/about/"> <h4>О нас</h4></a></li>
+            <li ><a href="/contacts/"><h4>Контакты</h4></a></li>
+        </ul>
+        <div class="ab">
+            {% block content %}
+            Главная страница
+            {% endblock %}
+        </div>
+       
+        <div >
+            <hr>
+            <p>Подвал сайта</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

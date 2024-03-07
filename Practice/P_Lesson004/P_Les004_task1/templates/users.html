@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+{% block content %}
+<div >
+    {% for student in students %}
+    <p >Имя студента: {{student.name }}<br>
+        Фамилия студента: {{ student.surname }}<br>
+        Оценки: {{ student.lesson }} лет<br>
+    </p>
+        
+    {% endfor %}
+</div>
+{% endblock %}

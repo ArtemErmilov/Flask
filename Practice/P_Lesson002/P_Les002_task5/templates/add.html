@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block ref %}
+<form action="{{ url_for('add_num') }}" method="post">
+    <input type="text" name="num1" placeholder="Введите первое число"> <br>
+    <input type="text" name="num2" placeholder="Введите второе число"> <br>
+    <fieldset>
+        <legend>Математическая операция</legend>
+        <div>
+            <input type="checkbox" id="add" name="math_num" value="add" checked />
+            <label for="add">Сумма</label>
+        </div>
+        <div>
+            <input type="checkbox" id="sub" name="math_num" value="sub" />
+            <label for="sub">Разность</label>
+        </div>
+        <div>
+            <input type="checkbox" id="mul" name="math_num" value="mul" />
+            <label for="mul">Умножение</label>
+        </div>
+        <div>
+            <input type="checkbox" id="dif" name="math_num" value="dif" />
+            <label for="dif">Деление</label>
+        </div>
+    </fieldset>
+
+    <input type="submit" name="add" value="Расчёт">
+
+</form>
+{% endblock %}
